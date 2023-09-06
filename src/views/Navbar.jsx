@@ -9,7 +9,7 @@ import {
   useDisclosure,
   useBreakpointValue,
   Spacer,
-  VStack, // Import VStack for stacking items in the mobile menu
+  VStack,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import logoImg from "../assets/images/logoBg.png";
@@ -56,62 +56,69 @@ const Navbar = () => {
       height="5rem"
       transition="background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s"
       background="transparent"
-      justifyContent="space-between"
-      minWidth="max-content"
+      paddingX="1rem"
     >
       {/* Logo on the left */}
-      <Box ml="1rem">
+      <Box flex="1">
         <ChakraLink to="/">
           <Image src={logoImg} alt="logo" w="10rem" h="auto" />
         </ChakraLink>
       </Box>
-
-      {/* Spacer for center alignment */}
-      <Spacer />
-
-      {/* Hamburger menu */}
-      {isMobile ? (
-        <IconButton
-          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-          size="lg"
-          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
-          variant="ghost"
-          onClick={onToggle}
-        />
-      ) : (
-        // Desktop menu
-        <Flex alignItems="center">
-          <Box p="2">
-            <ChakraLink
-              to="/projects"
-              color="black"
-              fontSize="md"
-              onClick={handleCloseMenu}
-            >
-              <Text fontFamily="Poppins">{t('Projects')}</Text>
-            </ChakraLink>
-          </Box>
-          <Box p="2">
-            <ChakraLink
-              to="/contact"
-              color="black"
-              fontSize="md"
-              onClick={handleCloseMenu}
-            >
-              <Text fontFamily="Poppins">{t('Contact')}</Text>
-            </ChakraLink>
-          </Box>
-          <Spacer />
-          <Box mr="10">
-            <Select onChange={handleLanguageChange}>
-              <option value="en">EN</option>
-              <option value="pl">PL</option>
-              <option value="sv">SV</option>
-            </Select>
-          </Box>
-        </Flex>
+  
+      {/* Center aligned Box for "Projects" and "Contact" */}
+      {!isMobile && (
+        <Box flex="1" textAlign="center">
+          <Flex justifyContent="center" alignItems="center" margin="0 auto">
+            <Box p="2">
+              <ChakraLink
+                to="/projects"
+                color="black"
+                fontSize="md"
+                onClick={handleCloseMenu}
+              >
+                <Text fontSize="xl" fontWeight="medium" fontFamily="Poppins">{t('Projects')}</Text>
+              </ChakraLink>
+            </Box>
+            <Box p="2">
+              <ChakraLink
+                to="/contact"
+                color="black"
+                fontSize="md"
+                onClick={handleCloseMenu}
+              >
+                <Text fontSize="xl" fontWeight="medium" fontFamily="Poppins">{t('Contact')}</Text>
+              </ChakraLink>
+            </Box>
+          </Flex>
+        </Box>
       )}
-
+  
+      <Spacer /> {/* This will push the next elements to the far right */}
+  
+      {/* Right aligned Box for language selection - only visible on desktop */}
+      {!isMobile && (
+        <Box textAlign="right">
+          <Select onChange={handleLanguageChange} value={selectedLanguage}>
+            <option value="en">EN</option>
+            <option value="pl">PL</option>
+            <option value="sv">SV</option>
+          </Select>
+        </Box>
+      )}
+  
+      {/* Hamburger menu visible only on mobile */}
+      {isMobile && (
+        <Box>
+          <IconButton
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            size="lg"
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            variant="ghost"
+            onClick={onToggle}
+          />
+        </Box>
+      )}
+  
       {/* Mobile menu */}
       {isMobile && isOpen && (
         <VStack
