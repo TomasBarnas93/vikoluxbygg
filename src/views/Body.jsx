@@ -6,7 +6,7 @@ import Foot from "../page/Foot";
 
 function Body() {
   return (
-    <main style={{ paddingTop: '4.5rem' }}>
+    <main style={{ paddingTop: '6rem' }}>
         <Home />
         <Projects />
         <Contact />
