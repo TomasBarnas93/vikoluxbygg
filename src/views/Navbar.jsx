@@ -1,3 +1,4 @@
+import React, { useContext } from 'react';
 import {
   Select,
   Image,
@@ -14,14 +15,14 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import logoImg from "../assets/images/logoBg.png";
 import { useTranslation } from "react-i18next";
-import { useEffect, useState } from "react";
+import { LanguageContext } from '../services/LanguageContext';
 
 const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
   const isMobile = useBreakpointValue({ base: true, md: false });
   const { i18n } = useTranslation();
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
   const { t } = useTranslation();
+  const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext);
 
   const handleLanguageChange = (e) => {
     const newLanguage = e.target.value;
@@ -30,14 +31,6 @@ const Navbar = () => {
 
     localStorage.setItem("selectedLanguage", newLanguage);
   };
-
-  useEffect(() => {
-    const storedLanguage = localStorage.getItem("selectedLanguage");
-    if (storedLanguage) {
-      setSelectedLanguage(storedLanguage);
-      i18n.changeLanguage(storedLanguage);
-    }
-  }, [i18n]);
 
   const handleCloseMenu = () => {
     if (isMobile && isOpen) {
@@ -55,17 +48,15 @@ const Navbar = () => {
       zIndex="100"
       height="5rem"
       transition="background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s"
-      background="transparent"
+      background="rgba(199, 199, 199, 0.5)"
       paddingX="1rem"
     >
-      {/* Logo on the left */}
       <Box flex="1">
         <ChakraLink to="/">
           <Image src={logoImg} alt="logo" w="10rem" h="auto" />
         </ChakraLink>
       </Box>
-  
-      {/* Center aligned Box for "Projects" and "Contact" */}
+      
       {!isMobile && (
         <Box flex="1" textAlign="center">
           <Flex justifyContent="center" alignItems="center" margin="0 auto">
@@ -93,9 +84,8 @@ const Navbar = () => {
         </Box>
       )}
   
-      <Spacer /> {/* This will push the next elements to the far right */}
-  
-      {/* Right aligned Box for language selection - only visible on desktop */}
+      <Spacer />
+
       {!isMobile && (
         <Box textAlign="right">
           <Select onChange={handleLanguageChange} value={selectedLanguage}>
@@ -106,7 +96,6 @@ const Navbar = () => {
         </Box>
       )}
   
-      {/* Hamburger menu visible only on mobile */}
       {isMobile && (
         <Box>
           <IconButton
@@ -119,7 +108,6 @@ const Navbar = () => {
         </Box>
       )}
   
-      {/* Mobile menu */}
       {isMobile && isOpen && (
         <VStack
           pos="absolute"

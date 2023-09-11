@@ -7,11 +7,12 @@ import Slide3 from "../assets/images/Slide3.jpg";
 import Slide4 from "../assets/images/Slide4.jpg";
 
 const Projects = () => {
+
   return (
     <>
       <AwesomeSlider
         cssModule={AwesomeSliderStyles}
-        style={{ width: "65%", margin: "0 auto", paddingTop: "2rem", marginBottom: "2rem"}}
+        style={{ width: "65%", margin: "0 auto", paddingTop: "4rem", marginBottom: "2rem"}}
       >
         <div data-src={Slide1} />
         <div data-src={Slide2} />

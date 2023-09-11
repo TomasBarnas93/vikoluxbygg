@@ -10,6 +10,7 @@ import { I18nextProvider } from "react-i18next";
 import { enTranslation } from "./data/en";
 import { svTranslation } from "./data/sv";
 import { plTranslation } from "./data/pl";
+import { LanguageProvider } from "./services/LanguageContext";
 
 const resources = {
   en: {
@@ -34,15 +35,15 @@ i18n.use(initReactI18next).init({
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-
   <I18nextProvider i18n={i18n}>
-  <ChakraProvider>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-  </ChakraProvider>
+    <ChakraProvider>
+      <LanguageProvider>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </LanguageProvider>
+    </ChakraProvider>
   </I18nextProvider>
 );
-
 
 reportWebVitals();
