@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, forwardRef } from "react";
 import {
   FormControl,
   FormLabel,
@@ -13,7 +13,7 @@ import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
 import { useTranslation } from "react-i18next";
 
-function Contact() {
+const Contact = forwardRef((props, ref) => {
   const [recipientName, setRecipientName] = useState("");
   const { t } = useTranslation();
 
@@ -65,6 +65,8 @@ function Contact() {
       borderRadius="lg"
       boxShadow="sm"
       shadow="xl"
+      fontFamily="Poppins"
+      ref={ref}
     >
       <FormControl as="form" onSubmit={handleSubmit}>
         <Flex direction={["column", "row"]} gap={6} mb={6}>
@@ -137,6 +139,6 @@ function Contact() {
       </FormControl>
     </Container>
   );
-}
+});
 
 export default Contact;

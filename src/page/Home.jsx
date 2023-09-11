@@ -13,9 +13,9 @@ import servicesPl from "../assets/images/servicesPl.png";
 import servicesEn from "../assets/images/servicesEn.png";
 import servicesSv from "../assets/images/servicesSv.png";
 import { LanguageContext } from "../services/LanguageContext";
-import { useContext } from "react";
+import { forwardRef, useContext } from "react";
 
-const Home = () => {
+const Home = forwardRef((props, ref) => {
   const { t } = useTranslation();
   const { selectedLanguage } = useContext(LanguageContext);
 
@@ -26,7 +26,7 @@ const Home = () => {
   };
 
   return (
-    <>
+    <div ref={ref}>
       <Flex
         direction={["column", "row"]}
         align="center"
@@ -67,12 +67,15 @@ const Home = () => {
         <Box position="relative" display="inline-block">
           <Image src={languageImageMap[selectedLanguage]} maxH="5rem" />
           <Box
-             position="absolute"
-             bottom="-1rem"
-             left="50%"
-             transform="translateX(-50%)"
-             borderBottom={{ base: "0.2em solid #5a351d", md: "0.3em solid #5a351d" }}
-             width="70%"
+            position="absolute"
+            bottom="-1rem"
+            left="50%"
+            transform="translateX(-50%)"
+            borderBottom={{
+              base: "0.2em solid #5a351d",
+              md: "0.3em solid #5a351d",
+            }}
+            width="70%"
           ></Box>
         </Box>
       </Flex>
@@ -105,8 +108,8 @@ const Home = () => {
           </UnorderedList>
         </Box>
       </Flex>
-    </>
+    </div>
   );
-};
+});
 
 export default Home;

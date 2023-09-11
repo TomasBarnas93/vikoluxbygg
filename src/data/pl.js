@@ -27,4 +27,7 @@ export const plTranslation = {
   message: "Wiadomość",
   send: "Wyślij",
   telefon: "Telefon",
+
+  //Foot - Contact
+  adress: "Box 14028 Sztokholm, Szwecja",
 };

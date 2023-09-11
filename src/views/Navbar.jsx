@@ -17,7 +17,7 @@ import logoImg from "../assets/images/logoBg.png";
 import { useTranslation } from "react-i18next";
 import { LanguageContext } from '../services/LanguageContext';
 
-const Navbar = () => {
+const Navbar = ({homeRef, projectsRef, contactRef}) => {
   const { isOpen, onToggle } = useDisclosure();
   const isMobile = useBreakpointValue({ base: true, md: false });
   const { i18n } = useTranslation();
@@ -32,9 +32,12 @@ const Navbar = () => {
     localStorage.setItem("selectedLanguage", newLanguage);
   };
 
-  const handleCloseMenu = () => {
+  const handleCloseMenu = (ref) => {
     if (isMobile && isOpen) {
       onToggle();
+    }
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -52,11 +55,13 @@ const Navbar = () => {
       paddingX="1rem"
     >
       <Box flex="1">
-        <ChakraLink to="/">
+      <ChakraLink onClick={() => handleCloseMenu(homeRef)}>
           <Image src={logoImg} alt="logo" w="10rem" h="auto" />
         </ChakraLink>
       </Box>
       
+      {/* //Desktop */}
+
       {!isMobile && (
         <Box flex="1" textAlign="center">
           <Flex justifyContent="center" alignItems="center" margin="0 auto">
@@ -65,7 +70,8 @@ const Navbar = () => {
                 to="/projects"
                 color="black"
                 fontSize="md"
-                onClick={handleCloseMenu}
+                onClick={() => handleCloseMenu(projectsRef)}
+                
               >
                 <Text color="#855821" fontSize="xl" fontWeight="medium" fontFamily="Poppins">{t('Projects')}</Text>
               </ChakraLink>
@@ -75,7 +81,7 @@ const Navbar = () => {
                 to="/contact"
                 color="black"
                 fontSize="md"
-                onClick={handleCloseMenu}
+                onClick={() => handleCloseMenu(contactRef)}
               >
                 <Text color="#855821" fontSize="xl" fontWeight="medium" fontFamily="Poppins">{t('Contact')}</Text>
               </ChakraLink>
@@ -96,6 +102,8 @@ const Navbar = () => {
         </Box>
       )}
   
+      {/* Mobile   */}
+
       {isMobile && (
         <Box>
           <IconButton
@@ -123,7 +131,7 @@ const Navbar = () => {
               to="/projects"
               color="black"
               fontSize="md"
-              onClick={handleCloseMenu}
+              onClick={() => handleCloseMenu(projectsRef)}
             >
               <Text color="#855821" fontWeight="medium" fontFamily="Poppins">{t('Projects')}</Text>
             </ChakraLink>
@@ -133,7 +141,7 @@ const Navbar = () => {
               to="/contact"
               color="black"
               fontSize="md"
-              onClick={handleCloseMenu}
+              onClick={() => handleCloseMenu(contactRef)}
             >
               <Text color="#855821" fontWeight="medium" fontFamily="Poppins">{t('Contact')}</Text>
             </ChakraLink>

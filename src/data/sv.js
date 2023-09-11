@@ -28,4 +28,6 @@ export const svTranslation = {
   send: "Skicka",
   telefon: "Telefon",
 
+  //Foot - Contact
+  adress: "Box 14028 Stockholm, Sverige",
 };

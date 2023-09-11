@@ -28,5 +28,6 @@ export const enTranslation = {
   send: "Send",
   telefon: "Telefone",
 
-
+  //Foot - Contact
+  adress: "Box 14028 Stockholm, Sweden",
 };
