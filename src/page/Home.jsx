@@ -47,7 +47,7 @@ const Home = () => {
           backgroundColor="white"
           borderRadius="lg"
         >
-          <Text mb={4} fontSize="x-large" fontFamily="Poppins">
+          <Text color="#5a351d" mb={4} fontSize="x-large" fontFamily="Poppins">
             {t("About")}
           </Text>
         </Box>
@@ -67,25 +67,32 @@ const Home = () => {
         <Box position="relative" display="inline-block">
           <Image src={languageImageMap[selectedLanguage]} maxH="5rem" />
           <Box
-            position="absolute"
-            bottom="-1rem"
-            left="50%"
-            transform="translateX(-50%)"
-            borderBottom="0.3em solid #5a351d"
-            width="70%"
+             position="absolute"
+             bottom="-1rem"
+             left="50%"
+             transform="translateX(-50%)"
+             borderBottom={{ base: "0.2em solid #5a351d", md: "0.3em solid #5a351d" }}
+             width="70%"
           ></Box>
         </Box>
       </Flex>
 
-      <Flex p={10} justifyContent="center" alignItems="center">
-        <Box width="100%">
+      <Flex
+        p={10}
+        justifyContent="center"
+        alignItems="center"
+        spacing="5"
+        borderRadius="lg"
+        shadow="xl"
+      >
+        <Box>
           <UnorderedList
             display={{ base: "block", md: "grid" }}
             gridTemplateColumns={{ md: "repeat(2, 1fr)" }}
             gap={{ base: 5, md: 10 }}
             fontSize="2xl"
             fontFamily="Poppins"
-            color="#855821"
+            color="#5a351d"
           >
             <ListItem>{t("1")}</ListItem>
             <ListItem>{t("2")}</ListItem>

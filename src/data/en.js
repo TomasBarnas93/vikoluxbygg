@@ -17,4 +17,16 @@ export const enTranslation = {
   7: "Facades",
   8: "Professional Advice",
   9: "Free Quotation",
+
+  //Contact
+  Success: "Message Sent Successfully",
+  Wrong: "Oops, something went wrong",
+  first_name: "First name",
+  last_name: "Last name",
+  email_address: "Email address",
+  message: "Message",
+  send: "Send",
+  telefon: "Telefone",
+
+
 };

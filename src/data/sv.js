@@ -17,4 +17,15 @@ export const svTranslation = {
   7: "Fasader",
   8: "Professionell rådgivning",
   9: "Kostnadsfri offert",
+
+  //Contact
+  Success: "Meddelandet skickades framgångsrikt",
+  Wrong: "Hoppsan, något gick fel",
+  first_name: "Förnamn",
+  last_name: "Efternamn",
+  email_address: "E-postadress",
+  message: "Meddelande",
+  send: "Skicka",
+  telefon: "Telefon",
+
 };

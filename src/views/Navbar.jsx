@@ -67,7 +67,7 @@ const Navbar = () => {
                 fontSize="md"
                 onClick={handleCloseMenu}
               >
-                <Text fontSize="xl" fontWeight="medium" fontFamily="Poppins">{t('Projects')}</Text>
+                <Text color="#855821" fontSize="xl" fontWeight="medium" fontFamily="Poppins">{t('Projects')}</Text>
               </ChakraLink>
             </Box>
             <Box p="2">
@@ -77,7 +77,7 @@ const Navbar = () => {
                 fontSize="md"
                 onClick={handleCloseMenu}
               >
-                <Text fontSize="xl" fontWeight="medium" fontFamily="Poppins">{t('Contact')}</Text>
+                <Text color="#855821" fontSize="xl" fontWeight="medium" fontFamily="Poppins">{t('Contact')}</Text>
               </ChakraLink>
             </Box>
           </Flex>
@@ -125,7 +125,7 @@ const Navbar = () => {
               fontSize="md"
               onClick={handleCloseMenu}
             >
-              <Text fontFamily="Poppins">{t('Projects')}</Text>
+              <Text color="#855821" fontWeight="medium" fontFamily="Poppins">{t('Projects')}</Text>
             </ChakraLink>
           </Box>
           <Box>
@@ -135,7 +135,7 @@ const Navbar = () => {
               fontSize="md"
               onClick={handleCloseMenu}
             >
-              <Text fontFamily="Poppins">{t('Contact')}</Text>
+              <Text color="#855821" fontWeight="medium" fontFamily="Poppins">{t('Contact')}</Text>
             </ChakraLink>
           </Box>
           <Box>

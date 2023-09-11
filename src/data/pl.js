@@ -17,4 +17,14 @@ export const plTranslation = {
   7: "Fasady",
   8: "Profesjonalne Doradztwo",
   9: "Bezpłatna Wycena",
+
+  //Contact
+  Success: "Wiadomość została wysłana pomyślnie",
+  Wrong: "Ups, coś poszło nie tak",
+  first_name: "Imię",
+  last_name: "Nazwisko",
+  email_address: "Adres e-mail",
+  message: "Wiadomość",
+  send: "Wyślij",
+  telefon: "Telefon",
 };
