@@ -1,16 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, forwardRef } from "react";
 import AwesomeSlider from "react-awesome-slider";
+import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import AwesomeSliderStyles from "react-awesome-slider/src/styles";
 import Slide1 from "../assets/images/Slide1.jpg";
 import Slide2 from "../assets/images/Slide2.jpg";
 import Slide3 from "../assets/images/Slide3.jpg";
 import Slide4 from "../assets/images/Slide4.jpg";
-import { forwardRef } from "react";
 import { Image, Box, Flex } from "@chakra-ui/react";
 import photoImgEn from "../assets/images/photoEn.png";
 import photoImgPl from "../assets/images/photoPl.png";
 import photoImgSv from "../assets/images/photoSv.png";
 import { LanguageContext } from "../services/LanguageContext";
+
+const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const Projects = forwardRef((props, ref) => {
   const { selectedLanguage } = useContext(LanguageContext);
@@ -22,9 +24,7 @@ const Projects = forwardRef((props, ref) => {
   };
 
   return (
-    <div
-      ref={ref}
-    >
+    <div ref={ref}>
       <Flex p={10} justifyContent="center" alignItems="center" maxH="10rem">
         <Box position="relative" display="inline-block">
           <Image src={languageImageMap[selectedLanguage]} maxH="5rem" />
@@ -41,8 +41,11 @@ const Projects = forwardRef((props, ref) => {
           ></Box>
         </Box>
       </Flex>
-      <AwesomeSlider
+      <AutoplaySlider
         cssModule={AwesomeSliderStyles}
+        play={true}
+        interval={2500}
+        cancelOnInteraction={false}
         style={{
           width: "65%",
           margin: "0 auto",
@@ -54,7 +57,7 @@ const Projects = forwardRef((props, ref) => {
         <div data-src={Slide2} />
         <div data-src={Slide3} />
         <div data-src={Slide4} />
-      </AwesomeSlider>
+      </AutoplaySlider>
     </div>
   );
 });

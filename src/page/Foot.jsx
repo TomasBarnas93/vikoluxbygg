@@ -1,19 +1,97 @@
 import React from "react";
 import email from "../assets/images/email.png";
 import facebook from "../assets/images/facebook.png";
-import { Link, Flex, Image, Text } from "@chakra-ui/react";
+import tel from "../assets/images/tel.png";
+import map from "../assets/images/map.png";
+import { Link, Flex, Image, Text, useMediaQuery } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 
 const Foot = () => {
   const { t } = useTranslation();
-
+  
   let date = new Date();
   let year = date.getFullYear();
+  
+  const [isMobile] = useMediaQuery("(max-width: 48em)");
 
+  if (isMobile) {
+    return (
+      <>
+        <Flex
+          direction="column"
+          align="center"
+          justify="center"
+          borderRadius="lg"
+          shadow="xl"
+          margin="2rem auto"
+        >
+          <Flex
+            direction="column"
+            align="center"
+            p={5}
+          >
+            <Flex align="center" flexDirection="row" mb={2}>
+              <Image src={email} maxH="2.5rem" mr={3} mb={0} />
+              <Link
+                href="mailto:kontakt@vikoluxbyggab.se"
+                _hover={{ textDecoration: "none" }}
+              >
+                <Text
+                  color="#5a351d"
+                  fontFamily="Poppins"
+                  fontSize="lg"
+                  fontWeight="medium"
+                  mt="0.5rem"
+                >
+                  kontakt@vikoluxbyggab.se
+                </Text>
+              </Link>
+            </Flex>
+            <Flex align="center" flexDirection="row" mb={2}>
+              <Image src={tel} maxH="2.5rem" mr={3} mb={0} />
+              <Text
+                color="#5a351d"
+                fontFamily="Poppins"
+                fontSize="lg"
+                fontWeight="medium"
+                mt="0.5rem"
+              >
+                073-557 90 64
+              </Text>
+            </Flex>
+            <Flex align="center" flexDirection="row">
+              <Image src={map} maxH="2.5rem" mr={3} mb={0} />
+              <Text
+                color="#5a351d"
+                fontFamily="Poppins"
+                fontSize="lg"
+                fontWeight="medium"
+                mt="0.5rem"
+              >
+                {t("adress")}
+              </Text>
+            </Flex>
+          </Flex>
+  
+          <Flex direction="column" align="center" p={5}>
+            <Link
+              href="https://www.facebook.com/profile.php?id=100082258553443"
+              _hover={{ textDecoration: "none" }}
+            >
+              <Image src={facebook} maxH="2.5rem" mb={2} />
+            </Link>
+          </Flex>
+        </Flex>
+  
+        <footer>&copy; {year} Vikolux Bygg AB | All rights reserved.</footer>
+      </>
+    );
+  }
+  
   return (
     <>
       <Flex
-        direction={["column", "row"]}
+        direction="row"
         align="center"
         justify="center"
         borderRadius="lg"
@@ -24,31 +102,36 @@ const Foot = () => {
           direction="column"
           align="center"
           p={5}
-          borderRight={["none", "1px solid #ccc"]}
         >
-          <Flex align="center" margin="1rem auto">
+          <Flex align="center">
             <Image src={email} maxH="2.5rem" />
             <Link
               href="mailto:kontakt@vikoluxbyggab.se"
               _hover={{ textDecoration: "none" }}
             ></Link>
           </Flex>
-          <Link
-            href="https://www.facebook.com/profile.php?id=100082258553443"
-            _hover={{ textDecoration: "none" }}
-          >
-            <Image src={facebook} maxH="2.5rem" mb={2} />
-          </Link>
+          <Flex align="center" margin="1rem auto">
+            <Image src={tel} maxH="2.5rem" />
+          </Flex>
+          <Flex align="center">
+            <Image src={map} maxH="2.5rem" />
+          </Flex>
         </Flex>
 
-        <Flex direction="column" align={["center", "start"]} spacing={5} p={5}>
+        <Flex
+          direction="column"
+          align="start"
+          p={5}
+          borderRight="0.2rem solid #ccc"
+          borderLeft="0.2rem solid #ccc"
+        >
           <Text
             color="#5a351d"
             fontFamily="Poppins"
             fontSize="lg"
             fontWeight="medium"
-            marginTop="1rem"
-            marginBottom="0.5rem"
+            marginBottom="1.5rem"
+            marginTop="0.5rem"
           >
             kontakt@vikoluxbyggab.se
           </Text>
@@ -57,6 +140,8 @@ const Foot = () => {
             fontFamily="Poppins"
             fontSize="lg"
             fontWeight="medium"
+            marginBottom="2rem"
+            marginTop="0.5rem"
           >
             073-557 90 64
           </Text>
@@ -68,6 +153,15 @@ const Foot = () => {
           >
             {t("adress")}
           </Text>
+        </Flex>
+
+        <Flex direction="column" align="center" p={5}>
+          <Link
+            href="https://www.facebook.com/profile.php?id=100082258553443"
+            _hover={{ textDecoration: "none" }}
+          >
+            <Image src={facebook} maxH="2.5rem" mb={2} />
+          </Link>
         </Flex>
       </Flex>
 
