@@ -12,6 +12,9 @@ import aboutImg from "../assets/images/aboutImg.jpg";
 import servicesPl from "../assets/images/servicesPl.png";
 import servicesEn from "../assets/images/servicesEn.png";
 import servicesSv from "../assets/images/servicesSv.png";
+import mottoPl from "../assets/images/mottoPl.png";
+import mottoEn from "../assets/images/mottoEn.png";
+import mottoSv from "../assets/images/mottoSv.png";
 import { LanguageContext } from "../services/LanguageContext";
 import { forwardRef, useContext } from "react";
 
@@ -19,14 +22,27 @@ const Home = forwardRef((props, ref) => {
   const { t } = useTranslation();
   const { selectedLanguage } = useContext(LanguageContext);
 
-  const languageImageMap = {
+  const serviceImageMap = {
     en: servicesEn,
     pl: servicesPl,
     sv: servicesSv,
   };
-
+  const mottoImageMap = {
+    en: mottoEn,
+    pl: mottoPl,
+    sv: mottoSv,
+  };
   return (
     <div ref={ref}>
+      <Flex
+        justifyContent="center"
+        alignItems="center"
+        maxW="50rem"
+        margin="0 auto"
+      >
+        <Image src={mottoImageMap[selectedLanguage]} maxW="35rem" />
+      </Flex>
+
       <Flex
         direction={["column", "row"]}
         align="center"
@@ -65,7 +81,7 @@ const Home = forwardRef((props, ref) => {
 
       <Flex p={10} justifyContent="center" alignItems="center" maxH="10rem">
         <Box position="relative" display="inline-block">
-          <Image src={languageImageMap[selectedLanguage]} maxH="5rem" />
+          <Image src={serviceImageMap[selectedLanguage]} maxH="5rem" />
           <Box
             position="absolute"
             bottom="-1rem"
