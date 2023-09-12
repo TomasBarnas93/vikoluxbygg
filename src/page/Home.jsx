@@ -40,7 +40,7 @@ const Home = forwardRef((props, ref) => {
         maxW="50rem"
         margin="0 auto"
       >
-        <Image src={mottoImageMap[selectedLanguage]} maxW="35rem" />
+        <Image src={mottoImageMap[selectedLanguage]} maxW={{ base: "90%", md: "35rem" }}  />
       </Flex>
 
       <Flex
@@ -74,14 +74,14 @@ const Home = forwardRef((props, ref) => {
             borderRadius="lg"
             objectFit="cover"
             boxSize="full"
-            maxH="30rem"
+            maxW={{ base: "100%", md: "35rem" }}
           />
         </Box>
       </Flex>
 
       <Flex p={10} justifyContent="center" alignItems="center" maxH="10rem">
         <Box position="relative" display="inline-block">
-          <Image src={serviceImageMap[selectedLanguage]} maxH="5rem" />
+          <Image src={serviceImageMap[selectedLanguage]} maxH="4rem" />
           <Box
             position="absolute"
             bottom="-1rem"

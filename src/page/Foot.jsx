@@ -3,19 +3,20 @@ import email from "../assets/images/email.png";
 import facebook from "../assets/images/facebook.png";
 import tel from "../assets/images/tel.png";
 import map from "../assets/images/map.png";
-import bkrlogo from '../assets/images/bkrlogo.jpg'
+import bkrlogo from "../assets/images/bkrlogo.jpg";
 import { Link, Flex, Image, Text, useMediaQuery } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 
 const Foot = () => {
   const { t } = useTranslation();
-  
+
   let date = new Date();
   let year = date.getFullYear();
-  
+
   const [isMobile] = useMediaQuery("(max-width: 48em)");
 
   if (isMobile) {
+    //Mobile
     return (
       <>
         <Flex
@@ -26,11 +27,7 @@ const Foot = () => {
           shadow="xl"
           margin="2rem auto"
         >
-          <Flex
-            direction="column"
-            align="center"
-            p={5}
-          >
+          <Flex direction="column" align="center" p={5}>
             <Flex align="center" flexDirection="row" mb={2}>
               <Image src={email} maxH="2.5rem" mr={3} mb={0} />
               <Link
@@ -73,25 +70,31 @@ const Foot = () => {
               </Text>
             </Flex>
           </Flex>
-  
-          <Flex direction="column" align="center" p={5}>
+
+          <Flex
+            direction="row"
+            align="center"
+            justifyContent="center"
+            gap="1rem"
+          >
             <Link
               href="https://www.facebook.com/profile.php?id=100082258553443"
               _hover={{ textDecoration: "none" }}
             >
-              <Image src={facebook} maxH="2.5rem" mb={2} />
+              <Image src={facebook} maxH="2.5rem" />
             </Link>
             <Link href="https://www.bkr.se/">
               <Image src={bkrlogo} maxH="2.5rem" />
             </Link>
           </Flex>
         </Flex>
-  
+
         <footer>&copy; {year} Vikolux Bygg AB | All rights reserved.</footer>
       </>
     );
   }
-  
+
+  //Desktop
   return (
     <>
       <Flex
@@ -102,11 +105,7 @@ const Foot = () => {
         shadow="xl"
         margin="2rem auto"
       >
-        <Flex
-          direction="column"
-          align="center"
-          p={5}
-        >
+        <Flex direction="column" align="center" p={5}>
           <Flex align="center">
             <Image src={email} maxH="2.5rem" />
             <Link
@@ -167,8 +166,8 @@ const Foot = () => {
             <Image src={facebook} maxH="2.5rem" mb={2} />
           </Link>
           <Link href="https://www.bkr.se/">
-              <Image src={bkrlogo} maxH="2.5rem" />
-            </Link>
+            <Image src={bkrlogo} maxH="2.5rem" />
+          </Link>
         </Flex>
       </Flex>
 

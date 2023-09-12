@@ -27,7 +27,7 @@ const Projects = forwardRef((props, ref) => {
     <div ref={ref}>
       <Flex p={10} justifyContent="center" alignItems="center" maxH="10rem">
         <Box position="relative" display="inline-block">
-          <Image src={languageImageMap[selectedLanguage]} maxH="5rem" />
+          <Image src={languageImageMap[selectedLanguage]} maxH="4rem" />
           <Box
             position="absolute"
             bottom="-1rem"
@@ -47,7 +47,7 @@ const Projects = forwardRef((props, ref) => {
         interval={2500}
         cancelOnInteraction={false}
         style={{
-          width: "65%",
+          width: "95%",
           margin: "0 auto",
           paddingTop: "4rem",
           marginBottom: "2rem",
