@@ -28,6 +28,18 @@ const Foot = () => {
           margin="2rem auto"
         >
           <Flex direction="column" align="center" p={5}>
+          <Flex align="center" flexDirection="row" mb={3} mr="10.5rem">
+              <Image src={tel} maxH="2.5rem" mr={3} mb={0} />
+              <Text
+                color="#5a351d"
+                fontFamily="Allrounder Monument Test"
+                fontSize="lg"
+                fontWeight="medium"
+                mt="0.5rem"
+              >
+                073 557 90 64
+              </Text>
+            </Flex>
             <Flex align="center" flexDirection="row" mb={2}>
               <Image src={email} maxH="2.5rem" mr={3} mb={0} />
               <Link
@@ -36,7 +48,7 @@ const Foot = () => {
               >
                 <Text
                   color="#5a351d"
-                  fontFamily="Poppins"
+                  fontFamily="Allrounder Monument Test"
                   fontSize="lg"
                   fontWeight="medium"
                   mt="0.5rem"
@@ -45,23 +57,11 @@ const Foot = () => {
                 </Text>
               </Link>
             </Flex>
-            <Flex align="center" flexDirection="row" mb={2}>
-              <Image src={tel} maxH="2.5rem" mr={3} mb={0} />
-              <Text
-                color="#5a351d"
-                fontFamily="Poppins"
-                fontSize="lg"
-                fontWeight="medium"
-                mt="0.5rem"
-              >
-                073-557 90 64
-              </Text>
-            </Flex>
             <Flex align="center" flexDirection="row">
               <Image src={map} maxH="2.5rem" mr={3} mb={0} />
               <Text
                 color="#5a351d"
-                fontFamily="Poppins"
+                fontFamily="Allrounder Monument Test"
                 fontSize="lg"
                 fontWeight="medium"
                 mt="0.5rem"
@@ -106,15 +106,17 @@ const Foot = () => {
         margin="2rem auto"
       >
         <Flex direction="column" align="center" p={5}>
+          <Flex align="center" margin="1rem auto">
+            <Image src={tel} maxH="2.5rem" />
+          </Flex>
           <Flex align="center">
-            <Image src={email} maxH="2.5rem" />
+            <Image src={email} maxH="2.5rem" 
+            marginBottom="1rem"
+            />
             <Link
               href="mailto:kontakt@vikoluxbyggab.se"
               _hover={{ textDecoration: "none" }}
             ></Link>
-          </Flex>
-          <Flex align="center" margin="1rem auto">
-            <Image src={tel} maxH="2.5rem" />
           </Flex>
           <Flex align="center">
             <Image src={map} maxH="2.5rem" />
@@ -130,27 +132,27 @@ const Foot = () => {
         >
           <Text
             color="#5a351d"
-            fontFamily="Poppins"
+            fontFamily="Allrounder Monument Test"
             fontSize="lg"
             fontWeight="medium"
             marginBottom="1.5rem"
+            marginTop="1rem"
+          >
+            073-557 90 64
+          </Text>
+          <Text
+            color="#5a351d"
+            fontFamily="Allrounder Monument Test"
+            fontSize="lg"
+            fontWeight="medium"
+            marginBottom="2rem"
             marginTop="0.5rem"
           >
             kontakt@vikoluxbyggab.se
           </Text>
           <Text
             color="#5a351d"
-            fontFamily="Poppins"
-            fontSize="lg"
-            fontWeight="medium"
-            marginBottom="2rem"
-            marginTop="0.5rem"
-          >
-            073-557 90 64
-          </Text>
-          <Text
-            color="#5a351d"
-            fontFamily="Poppins"
+            fontFamily="Allrounder Monument Test"
             fontSize="lg"
             fontWeight="medium"
           >

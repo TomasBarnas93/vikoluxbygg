@@ -4,24 +4,23 @@ export const svTranslation = {
   Projects: "PROJEKTER",
 
   //About
-  About:
-    "Vi har funnits sedan 2013 och har nu vuxit till en livlig arbetsplats med 18 entusiastiska medarbetare. Vårt team, en blandning av erfarna veteraner och uppåtgående talanger, arbetar tillsammans i en dynamisk miljö där innovation och glädjen att skapa frodas. Vi är djupt övertygade om vikten av personlig kontakt och samarbete. Därför är dina idéer och önskemål inte bara välkomna, utan utgör grunden för allt vi gör. Genom att placera dina visioner i centrum strävar vi efter att tillsammans skapa resultat som överträffar förväntningarna. Dessutom är vi i ständigt samarbete med ett hydraulikföretag, ett elektriskt företag och en arkitekt.",
+  About: "VÅrt fÖretag har funnits pÅ marknaden sedan 2013. Idag Är det en livlig arbetsplats med 18 engagerade anstÄllda. VÅrt team Är en blandning av erfarna veteraner och framvÄxande talanger som arbetar tillsammans i en dynamisk miljÖ.\n\nInnovation och kreativitet Är vÅra mellannamn, och att fÖrstÅ och uppfylla kundernas fÖrvÄntningar Är vÅr hÖgsta prioritet! DÄrfÖr Är dina idÉer och ÖnskemÅl inte bara vÄlkomna, utan utgÖr grunden fÖr allt vi gÖr. Genom att sÄtta dina visioner i centrum, strÄvar vi efter att gemensamt skapa resultat som ÖvertrÄffar fÖrvÄntningarna.\n\nVad mer? Vi samarbetar stÄndigt med hydrauliska, elektriska fÖretag och en arkitekt.",
 
   //Home - List
   1: "Husbyggnation",
   2: "Terrassbyggnader",
-  3: "Trädgårdsanläggningar runt hus",
+  3: "TrÄdgÅrdsanlÄggningar runt hus",
   4: "Komplett badrumsrenovering",
-  5: "Möbelmontering",
-  6: "Anpassning av vindar och källare",
+  5: "MÖbelmontering",
+  6: "Anpassning av vindar och kÄllare",
   7: "Fasader",
-  8: "Professionell rådgivning",
+  8: "Professionell rÅdgivning",
   9: "Kostnadsfri offert",
 
   //Contact
-  Success: "Meddelandet skickades framgångsrikt",
-  Wrong: "Hoppsan, något gick fel",
-  first_name: "Förnamn",
+  Success: "Meddelandet skickades framgÅngsrikt",
+  Wrong: "Hoppsan, nÅgot gick fel",
+  first_name: "FÖrnamn",
   last_name: "Efternamn",
   email_address: "E-postadress",
   message: "Meddelande",

@@ -4,8 +4,7 @@ export const enTranslation = {
   Projects: "PROJECTS",
 
   //About
-  About:
-    "We have existed since 2013, and now we have grown into a vibrant workplace with 18 enthusiastic employees. Our team, a mix of experienced veterans and rising talents, works together in a dynamic environment where innovation and the joy of creating flourish. We are deeply convinced of the importance of personal contact and cooperation. Therefore, your ideas and wishes are not only welcome but form the basis of everything we do. By placing your visions at the center, we strive to co-create results that exceed expectations. Moreover, we are in constant collaboration with a hydraulic company, an electrical company, and an architect.",
+  About: "Our company has been in the market since 2013. Today, it is a vibrant workplace with 18 engaged employees. Our team is a mix of experienced veterans and rising talents working together in a dynamic environment.\n\nInnovation and creativity are our middle names, and understanding and fulfilling customer expectations are our top priority! Therefore, your ideas and wishes are not only welcome but form the foundation of everything we do. By putting your visions at the center, we aim to co-create results that exceed expectations.\n\nWhat's more? We are in constant collaboration with hydraulic, electrical companies, and an architect.",
 
   //Home - List
   1: "House Construction",

@@ -8,7 +8,7 @@ import {
   UnorderedList,
   ListItem,
 } from "@chakra-ui/react";
-import aboutImg from "../assets/images/aboutImg.jpg";
+import aboutImg from "../assets/images/aboutimage.png";
 import servicesPl from "../assets/images/servicesPl.png";
 import servicesEn from "../assets/images/servicesEn.png";
 import servicesSv from "../assets/images/servicesSv.png";
@@ -40,58 +40,74 @@ const Home = forwardRef((props, ref) => {
         maxW="50rem"
         margin="0 auto"
       >
-        <Image src={mottoImageMap[selectedLanguage]} maxW={{ base: "90%", md: "35rem" }}  />
+        <Image
+          src={mottoImageMap[selectedLanguage]}
+          maxW={{ base: "90%", md: "35rem" }}
+        />
       </Flex>
 
       <Flex
-        direction={["column", "row"]}
-        align="center"
-        justify="center"
-        spacing="5"
-        p={5}
-        borderRadius="lg"
-        shadow="xl"
-      >
-        <Box
-          flex="1"
-          p={5}
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
-          textAlign="center"
-          backgroundColor="white"
-          borderRadius="lg"
-        >
-          <Text color="#5a351d" mb={4} fontSize="x-large" fontFamily="Poppins">
-            {t("About")}
-          </Text>
-        </Box>
-        <Box flex="1" p={5} position="relative">
-          <Image
-            src={aboutImg}
-            alt="aboutImg"
-            borderRadius="lg"
-            objectFit="cover"
-            boxSize="full"
-            maxW={{ base: "100%", md: "35rem" }}
-          />
-        </Box>
-      </Flex>
+  direction={["column", "row"]}
+  align="center"
+  justify="center"
+  spacing="5"
+  p={5}
+  borderRadius="lg"
+  shadow="xl"
+>
+  <Box
+    flex={{ base: "1", md: "0.5" }}
+    p={5}
+    display="flex"
+    flexDirection="column"
+    alignItems="center"
+    justifyContent="center"
+    textAlign="justify"
+    backgroundColor="white"
+    borderRadius="lg"
+  >
+    <Text
+      color="#5a351d"
+      mb={4}
+      fontSize="xl"
+      fontFamily="Allrounder Monument Test"
+    >
+      {t("About")
+        .split("\n")
+        .map((paragraph, index) => (
+          <React.Fragment key={index}>
+            {paragraph}
+            <br />
+          </React.Fragment>
+        ))}
+    </Text>
+  </Box>
+  <Box flex={{ base: "1", md: "0.5" }} p={5} position="relative"> 
+    <Image
+      src={aboutImg}
+      alt="aboutImg"
+      objectFit="cover"
+      boxSize="full"
+      maxW={{ base: "100%", md: "100%" }}  
+    />
+  </Box>
+</Flex>
+
+
 
       <Flex p={10} justifyContent="center" alignItems="center" maxH="10rem">
         <Box position="relative" display="inline-block">
-          <Image src={serviceImageMap[selectedLanguage]} maxH="4rem" />
+          <Image src={serviceImageMap[selectedLanguage]} maxH="3.7em" />
           <Box
             position="absolute"
             bottom="-1rem"
             left="50%"
             transform="translateX(-50%)"
             borderBottom={{
-              base: "0.2em solid #5a351d",
-              md: "0.3em solid #5a351d",
+              base: "0.1em solid #A0794E",
+              md: "0.1em solid #A0794E",
             }}
-            width="70%"
+            width="50%"
           ></Box>
         </Box>
       </Flex>
@@ -109,8 +125,8 @@ const Home = forwardRef((props, ref) => {
             display={{ base: "block", md: "grid" }}
             gridTemplateColumns={{ md: "repeat(2, 1fr)" }}
             gap={{ base: 5, md: 10 }}
-            fontSize="2xl"
-            fontFamily="Poppins"
+            fontSize="xl"
+            fontFamily="Allrounder Monument Test"
             color="#5a351d"
           >
             <ListItem>{t("1")}</ListItem>

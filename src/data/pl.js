@@ -4,28 +4,27 @@ export const plTranslation = {
   Projects: "PROJEKTY",
 
   //About
-  About:
-    "Istniejemy od 2013 roku, a teraz rozrośliśmy się w tętniące życiem miejsce pracy z 18 zapalonymi pracownikami. Nasz zespół, mieszanka doświadczonych weteranów i wschodzących talentów, wspólnie pracuje w dynamicznym środowisku, w którym kwitną innowacje i radość z tworzenia. Jesteśmy głęboko przekonani o znaczeniu osobistego kontaktu i współpracy. Dlatego twoje pomysły i życzenia nie są tylko mile widziane, ale stanowią podstawę wszystkiego, co robimy. Kładąc twoje wizje w centrum, dążymy do wspólnego tworzenia wyników przekraczających oczekiwania. Co więcej, jesteśmy w stałej współpracy z firmą hydrauliczną, elektryczną oraz z architektem.",
+  About: "Nasza firma istnieje na rynku od 2013 roku. W dniu dzisiejszym jest to tĘtniĄce Życiem miejsce pracy z 18 zaangaŻowanymi  pracownikami. Nasz zespÓŁ to mieszanka doŚwiadczonych weteranÓw i wschodzĄcych talentÓw wspÓlnie pracujĄcych w dynamicznym Środowisku.\n\nInnowacyjnoŚĆ i pomysŁowoŚĆ to nasze drugie imiĘ a zozumienie i speŁnienie oczekiwań klienta stawiamy na pierwszym miejscu ! Dlatego Twoje pomysŁy i Życzenia nie sĄ tylko mile widziane, ale stanowiĄ podstawĘ wszystkiego, co robimy. KŁadĄc Twoje wizje w centrum, dĄŻymy do wspÓlnego tworzenia wynikÓw przekraczajĄcych oczekiwania.\n\nCo wiĘcej? JesteŚmy w staŁej wspÓŁpracy z firmĄ hydraulicznĄ, elektrycznĄ oraz z architektem.",
 
   //Home - List
-  1: "Budowa Domów",
-  2: "Budowa Tarasów",
-  3: "Zakładanie Ogrodów wokół Domu",
+  1: "Budowa DomÓw",
+  2: "Budowa TarasÓw",
+  3: "ZakŁadanie OgrodÓw wokÓŁ Domu",
   4: "Kompletna renowacja Łazienek",
-  5: "Montaż Mebli",
+  5: "MontaŻ Mebli",
   6: "Adaptacja Poddaszy i Piwnic",
   7: "Fasady",
   8: "Profesjonalne Doradztwo",
-  9: "Bezpłatna Wycena",
+  9: "BezpŁatna Wycena",
 
   //Contact
-  Success: "Wiadomość została wysłana pomyślnie",
-  Wrong: "Ups, coś poszło nie tak",
-  first_name: "Imię",
+  Success: "WiadomoŚĆ zostaŁa wysŁana pomyŚlnie",
+  Wrong: "Ups, coŚ poszŁo nie tak",
+  first_name: "ImiĘ",
   last_name: "Nazwisko",
   email_address: "Adres e-mail",
-  message: "Wiadomość",
-  send: "Wyślij",
+  message: "WiadomoŚĆ",
+  send: "WyŚlij",
   telefon: "Telefon",
 
   //Foot - Contact

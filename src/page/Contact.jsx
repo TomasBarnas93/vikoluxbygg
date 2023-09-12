@@ -65,7 +65,7 @@ const Contact = forwardRef((props, ref) => {
       borderRadius="lg"
       boxShadow="sm"
       shadow="xl"
-      fontFamily="Poppins"
+      fontFamily="Allrounder Monument Test"
       ref={ref}
     >
       <FormControl as="form" onSubmit={handleSubmit}>
@@ -74,7 +74,13 @@ const Contact = forwardRef((props, ref) => {
             <FormLabel color="#5a351d" fontSize="lg" mt={2}>
               {t("first_name")}
             </FormLabel>
-            <Input size="lg" name="from_name" w="100%" borderColor="#5a351d" required />
+            <Input
+              size="lg"
+              name="from_name"
+              w="100%"
+              borderColor="#5a351d"
+              required
+            />
           </Flex>
           <Flex direction="column" flex="1">
             <FormLabel color="#5a351d" fontSize="lg" mt={2}>
@@ -124,7 +130,13 @@ const Contact = forwardRef((props, ref) => {
           <FormLabel color="#5a351d" fontSize="lg" mt={2}>
             {t("message")}
           </FormLabel>
-          <Textarea size="lg" name="message" w="100%" borderColor="#5a351d" required />
+          <Textarea
+            size="lg"
+            name="message"
+            w="100%"
+            borderColor="#5a351d"
+            required
+          />
         </Flex>
         <Button
           leftIcon={<EmailIcon />}

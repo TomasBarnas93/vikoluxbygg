@@ -1,11 +1,18 @@
 import React, { useContext, forwardRef } from "react";
 import AwesomeSlider from "react-awesome-slider";
-import withAutoplay from 'react-awesome-slider/dist/autoplay';
+import withAutoplay from "react-awesome-slider/dist/autoplay";
 import AwesomeSliderStyles from "react-awesome-slider/src/styles";
-import Slide1 from "../assets/images/Slide1.jpg";
-import Slide2 from "../assets/images/Slide2.jpg";
-import Slide3 from "../assets/images/Slide3.jpg";
-import Slide4 from "../assets/images/Slide4.jpg";
+import Slide1 from "../assets/images/Slide1.PNG";
+import Slide2 from "../assets/images/Slide2.PNG";
+import Slide4 from "../assets/images/Slide4.PNG";
+import Slide5 from "../assets/images/Slide5.PNG";
+import Slide6 from "../assets/images/Slide6.PNG";
+import Slide7 from "../assets/images/Slide7.PNG";
+import Slide8 from "../assets/images/Slide8.PNG";
+import Slide9 from "../assets/images/Slide9.PNG";
+import Slide10 from "../assets/images/Slide10.PNG";
+import Slide11 from "../assets/images/Slide11.PNG";
+import Slide12 from "../assets/images/Slide12.PNG";
 import { Image, Box, Flex } from "@chakra-ui/react";
 import photoImgEn from "../assets/images/photoEn.png";
 import photoImgPl from "../assets/images/photoPl.png";
@@ -34,10 +41,10 @@ const Projects = forwardRef((props, ref) => {
             left="50%"
             transform="translateX(-50%)"
             borderBottom={{
-              base: "0.2em solid #5a351d",
-              md: "0.3em solid #5a351d",
+              base: "0.1em solid #A0794E",
+              md: "0.1em solid #A0794E",
             }}
-            width="70%"
+            width="50%"
           ></Box>
         </Box>
       </Flex>
@@ -48,16 +55,29 @@ const Projects = forwardRef((props, ref) => {
         cancelOnInteraction={false}
         style={{
           width: "95%",
+          maxWidth: "45rem",
           margin: "0 auto",
-          paddingTop: "4rem",
           marginBottom: "2rem",
+          "@media (min-width: 48em)": {
+            maxWidth: "30rem",
+          },
         }}
       >
         <div data-src={Slide1} />
         <div data-src={Slide2} />
-        <div data-src={Slide3} />
         <div data-src={Slide4} />
+        <div data-src={Slide5} />
+        <div data-src={Slide6} />
+        <div data-src={Slide7} />
+        <div data-src={Slide8} />
+        <div data-src={Slide9} />
+        <div data-src={Slide10} />
+        <div data-src={Slide11} />
+        <div data-src={Slide12} />
       </AutoplaySlider>
+      <Box
+        boxShadow="lg"
+      >&nbsp;</Box>
     </div>
   );
 });

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from "react";
 import {
   Select,
   Image,
@@ -15,14 +15,27 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import logoImg from "../assets/images/logoBg.png";
 import { useTranslation } from "react-i18next";
-import { LanguageContext } from '../services/LanguageContext';
+import { LanguageContext } from "../services/LanguageContext";
 
-const Navbar = ({homeRef, projectsRef, contactRef}) => {
+const Navbar = ({ homeRef, projectsRef, contactRef }) => {
   const { isOpen, onToggle } = useDisclosure();
   const isMobile = useBreakpointValue({ base: true, md: false });
   const { i18n } = useTranslation();
   const { t } = useTranslation();
   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext);
+  const [isScrolledDown, setIsScrolledDown] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolledDown(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleLanguageChange = (e) => {
     const newLanguage = e.target.value;
@@ -37,7 +50,7 @@ const Navbar = ({homeRef, projectsRef, contactRef}) => {
       onToggle();
     }
     if (ref && ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth' });
+      ref.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -53,16 +66,17 @@ const Navbar = ({homeRef, projectsRef, contactRef}) => {
       transition="background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s"
       background="rgba(199, 199, 199, 0.5)"
       paddingX="1rem"
+      boxShadow="xl"
     >
       <Box flex="1">
-      <ChakraLink onClick={() => handleCloseMenu(homeRef)}>
+        <ChakraLink onClick={() => handleCloseMenu(homeRef)}>
           <Image src={logoImg} alt="logo" w="10rem" h="auto" />
         </ChakraLink>
       </Box>
-      
+
       {/* //Desktop */}
 
-      {!isMobile && (
+      {!isMobile && !isScrolledDown && (
         <Box flex="1" textAlign="center">
           <Flex justifyContent="center" alignItems="center" margin="0 auto">
             <Box p="2">
@@ -71,9 +85,19 @@ const Navbar = ({homeRef, projectsRef, contactRef}) => {
                 color="black"
                 fontSize="md"
                 onClick={() => handleCloseMenu(projectsRef)}
-                
               >
-                <Text color="#855821" fontSize="xl" fontWeight="medium" fontFamily="Poppins">{t('Projects')}</Text>
+                <Text
+                  _hover={{
+                    textDecoration: "underline",
+                    textDecorationColor: "#855821",
+                  }}
+                  color="#855821"
+                  fontSize="xl"
+                  fontWeight="medium"
+                  fontFamily="Allrounder Monument Test"
+                >
+                  {t("Projects")}
+                </Text>
               </ChakraLink>
             </Box>
             <Box p="2">
@@ -83,25 +107,48 @@ const Navbar = ({homeRef, projectsRef, contactRef}) => {
                 fontSize="md"
                 onClick={() => handleCloseMenu(contactRef)}
               >
-                <Text color="#855821" fontSize="xl" fontWeight="medium" fontFamily="Poppins">{t('Contact')}</Text>
+                <Text
+                  _hover={{
+                    textDecoration: "underline",
+                    textDecorationColor: "#855821",
+                  }}
+                  color="#855821"
+                  fontSize="xl"
+                  fontWeight="medium"
+                  fontFamily="Allrounder Monument Test"
+                >
+                  {t("Contact")}
+                </Text>
               </ChakraLink>
             </Box>
           </Flex>
         </Box>
       )}
-  
+
       <Spacer />
 
-      {!isMobile && (
+      {!isMobile && !isScrolledDown && (
         <Box textAlign="right">
-          <Select onChange={handleLanguageChange} value={selectedLanguage}>
+          <Select
+            onChange={handleLanguageChange}
+            value={selectedLanguage}
+            backgroundColor=""
+            color="#855821"
+            borderColor=""
+            _hover={{
+              backgroundColor: "#da8238",
+            }}
+            _focus={{
+              borderColor: "#da8238", 
+            }}
+          >
             <option value="en">EN</option>
             <option value="pl">PL</option>
             <option value="sv">SV</option>
           </Select>
         </Box>
       )}
-  
+
       {/* Mobile   */}
 
       {isMobile && (
@@ -109,13 +156,15 @@ const Navbar = ({homeRef, projectsRef, contactRef}) => {
           <IconButton
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             size="lg"
-            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-label={
+              isOpen ? "Close navigation menu" : "Open navigation menu"
+            }
             variant="ghost"
             onClick={onToggle}
           />
         </Box>
       )}
-  
+
       {isMobile && isOpen && (
         <VStack
           pos="absolute"
@@ -133,7 +182,13 @@ const Navbar = ({homeRef, projectsRef, contactRef}) => {
               fontSize="md"
               onClick={() => handleCloseMenu(projectsRef)}
             >
-              <Text color="#855821" fontWeight="medium" fontFamily="Poppins">{t('Projects')}</Text>
+              <Text
+                color="#855821"
+                fontWeight="medium"
+                fontFamily="Allrounder Monument Test"
+              >
+                {t("Projects")}
+              </Text>
             </ChakraLink>
           </Box>
           <Box>
@@ -143,7 +198,13 @@ const Navbar = ({homeRef, projectsRef, contactRef}) => {
               fontSize="md"
               onClick={() => handleCloseMenu(contactRef)}
             >
-              <Text color="#855821" fontWeight="medium" fontFamily="Poppins">{t('Contact')}</Text>
+              <Text
+                color="#855821"
+                fontWeight="medium"
+                fontFamily="Allrounder Monument Test"
+              >
+                {t("Contact")}
+              </Text>
             </ChakraLink>
           </Box>
           <Box>
