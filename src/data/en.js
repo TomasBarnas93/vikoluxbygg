@@ -5,13 +5,13 @@ export const enTranslation = {
 
   //About
   About:
-    "We have been in business since 2013, and now we have grown into a vibrant workplace with 18 passionate employees. Our team, a mix of experienced veterans and budding talents, works together in a dynamic environment where innovation and creativity thrive. We firmly believe in the importance of personal contact and collaboration. That's why your ideas and wishes are not only welcome, but form the very foundation of everything we do. By putting your visions at the center, we strive to create results that exceed expectations, together.",
+    "We have existed since 2013, and now we have grown into a vibrant workplace with 18 enthusiastic employees. Our team, a mix of experienced veterans and rising talents, works together in a dynamic environment where innovation and the joy of creating flourish. We are deeply convinced of the importance of personal contact and cooperation. Therefore, your ideas and wishes are not only welcome but form the basis of everything we do. By placing your visions at the center, we strive to co-create results that exceed expectations. Moreover, we are in constant collaboration with a hydraulic company, an electrical company, and an architect.",
 
   //Home - List
   1: "House Construction",
   2: "Terrace Building",
   3: "Garden Installations around the House",
-  4: "Complete Bathroom Furnishings",
+  4: "Complete Bathroom Renovation",
   5: "Furniture Assembly",
   6: "Adaptation of Attics and Basements",
   7: "Facades",

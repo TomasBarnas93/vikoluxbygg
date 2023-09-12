@@ -3,6 +3,7 @@ import email from "../assets/images/email.png";
 import facebook from "../assets/images/facebook.png";
 import tel from "../assets/images/tel.png";
 import map from "../assets/images/map.png";
+import bkrlogo from '../assets/images/bkrlogo.jpg'
 import { Link, Flex, Image, Text, useMediaQuery } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 
@@ -79,6 +80,9 @@ const Foot = () => {
               _hover={{ textDecoration: "none" }}
             >
               <Image src={facebook} maxH="2.5rem" mb={2} />
+            </Link>
+            <Link href="https://www.bkr.se/">
+              <Image src={bkrlogo} maxH="2.5rem" />
             </Link>
           </Flex>
         </Flex>
@@ -162,6 +166,9 @@ const Foot = () => {
           >
             <Image src={facebook} maxH="2.5rem" mb={2} />
           </Link>
+          <Link href="https://www.bkr.se/">
+              <Image src={bkrlogo} maxH="2.5rem" />
+            </Link>
         </Flex>
       </Flex>
 

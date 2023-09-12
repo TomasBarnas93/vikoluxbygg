@@ -5,13 +5,13 @@ export const svTranslation = {
 
   //About
   About:
-    "Vi har funnits sedan 2013, och nu har vi vuxit till en levande arbetsplats med 18 passionerade medarbetare. Vårt team, en blandning av erfarna veteraner och spirande talanger, arbetar tillsammans i en dynamisk miljö där innovation och skaparglädje frodas. Vi tror fast på vikten av personlig kontakt och samarbete. Det är därför dina idéer och önskemål inte bara är välkomna, utan utgör själva grunden för allt vi gör. Genom att sätta dina visioner i centrum, strävar vi efter att tillsammans skapa resultat som överträffar förväntningarna.",
+    "Vi har funnits sedan 2013 och har nu vuxit till en livlig arbetsplats med 18 entusiastiska medarbetare. Vårt team, en blandning av erfarna veteraner och uppåtgående talanger, arbetar tillsammans i en dynamisk miljö där innovation och glädjen att skapa frodas. Vi är djupt övertygade om vikten av personlig kontakt och samarbete. Därför är dina idéer och önskemål inte bara välkomna, utan utgör grunden för allt vi gör. Genom att placera dina visioner i centrum strävar vi efter att tillsammans skapa resultat som överträffar förväntningarna. Dessutom är vi i ständigt samarbete med ett hydraulikföretag, ett elektriskt företag och en arkitekt.",
 
   //Home - List
   1: "Husbyggnation",
   2: "Terrassbyggnader",
   3: "Trädgårdsanläggningar runt hus",
-  4: "Kompletta badrumsinredningar",
+  4: "Komplett badrumsrenovering",
   5: "Möbelmontering",
   6: "Anpassning av vindar och källare",
   7: "Fasader",
