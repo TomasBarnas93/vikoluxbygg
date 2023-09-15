@@ -27,7 +27,7 @@ const Foot = () => {
           shadow="xl"
           margin="2rem auto"
         >
-          <Flex direction="column" align="center" p={5}>
+          <Flex direction="column" align="start" p={5}>
           <Flex align="center" flexDirection="row" mb={3} mr="10.5rem">
               <Image src={tel} maxH="2.5rem" mr={3} mb={0} />
               <Text
