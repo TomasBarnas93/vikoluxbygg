@@ -14,9 +14,9 @@ import Slide10 from "../assets/images/Slide10.PNG";
 import Slide11 from "../assets/images/Slide11.PNG";
 import Slide12 from "../assets/images/Slide12.PNG";
 import { Image, Box, Flex } from "@chakra-ui/react";
-import photoImgEn from "../assets/images/photoEn.png";
-import photoImgPl from "../assets/images/photoPl.png";
-import photoImgSv from "../assets/images/photoSv.png";
+import projectEn from "../assets/images/projectsEn.png";
+import projectPl from "../assets/images/projectsPl.png";
+import projectSv from "../assets/images/projectsSv.png";
 import { LanguageContext } from "../services/LanguageContext";
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
@@ -25,16 +25,21 @@ const Projects = forwardRef((props, ref) => {
   const { selectedLanguage } = useContext(LanguageContext);
 
   const languageImageMap = {
-    en: photoImgEn,
-    pl: photoImgPl,
-    sv: photoImgSv,
+    en: projectEn,
+    pl: projectPl,
+    sv: projectSv,
   };
 
   return (
     <div ref={ref}>
       <Flex p={10} justifyContent="center" alignItems="center" maxH="10rem">
         <Box position="relative" display="inline-block">
-          <Image src={languageImageMap[selectedLanguage]} maxH="4rem" />
+          <Image
+            src={languageImageMap[selectedLanguage]}
+            maxH={{ base: "1.8rem", md: "4rem" }}
+            maxW={{ base: "35rem", md: "39rem" }}
+            objectFit="cover"
+          />
           <Box
             position="absolute"
             bottom="-1rem"
@@ -75,9 +80,7 @@ const Projects = forwardRef((props, ref) => {
         <div data-src={Slide11} />
         <div data-src={Slide12} />
       </AutoplaySlider>
-      <Box
-        boxShadow="lg"
-      >&nbsp;</Box>
+      <Box boxShadow="lg">&nbsp;</Box>
     </div>
   );
 });

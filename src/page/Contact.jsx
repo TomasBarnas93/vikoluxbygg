@@ -25,10 +25,11 @@ const Contact = forwardRef((props, ref) => {
     const USER_ID = process.env.REACT_APP_USER_ID;
 
     const formData = {
-      from_name: e.target.elements.from_name.value,
-      to_name: recipientName,
+      from_firstname: e.target.elements.from_firstname.value,
+      from_lastname: recipientName,
       message: e.target.elements.message.value,
       user_email: e.target.elements.user_email.value,
+      user_telefon: e.target.elements.user_telefon.value,
     };
 
     emailjs
@@ -76,7 +77,7 @@ const Contact = forwardRef((props, ref) => {
             </FormLabel>
             <Input
               size="lg"
-              name="from_name"
+              name="from_firstname"
               w="100%"
               borderColor="#5a351d"
               required
@@ -88,7 +89,7 @@ const Contact = forwardRef((props, ref) => {
             </FormLabel>
             <Input
               size="lg"
-              name="to_name"
+              name="from_lastname"
               w="100%"
               borderColor="#5a351d"
               onChange={handleRecipientNameChange}
