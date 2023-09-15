@@ -4,6 +4,7 @@ import Projects from "../page/Projects";
 import Contact from "../page/Contact";
 import Foot from "../page/Foot";
 import Navbar from "./Navbar";
+import BeforeAfter from "../page/BeforeAfter";
 
 function Body() {
   const homeRef = useRef(null);
@@ -19,6 +20,7 @@ function Body() {
       />
       <Home ref={homeRef} />
       <Projects ref={projectsRef} />
+      <BeforeAfter />
       <Contact ref={contactRef} />
       <Foot />
     </main>

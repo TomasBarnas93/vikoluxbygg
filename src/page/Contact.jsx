@@ -1,4 +1,4 @@
-import React, { useState, forwardRef } from "react";
+import React, { useState, forwardRef, useContext } from "react";
 import {
   FormControl,
   FormLabel,
@@ -7,15 +7,26 @@ import {
   Flex,
   Container,
   Textarea,
+  Image,
+  Box,
 } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
 import { useTranslation } from "react-i18next";
-
+import { LanguageContext } from "../services/LanguageContext";
+import contactEn from "../assets/images/contactEn.JPG";
+import contactPl from "../assets/images/contactPl.JPG";
 const Contact = forwardRef((props, ref) => {
   const [recipientName, setRecipientName] = useState("");
   const { t } = useTranslation();
+  const { selectedLanguage } = useContext(LanguageContext);
+
+  const contactImageMap = {
+    en: contactEn,
+    pl: contactPl,
+    sv: contactEn,
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -60,7 +71,6 @@ const Contact = forwardRef((props, ref) => {
 
   return (
     <Container
-      mt={20}
       maxW="container.xl"
       p={8}
       borderRadius="lg"
@@ -68,7 +78,30 @@ const Contact = forwardRef((props, ref) => {
       shadow="xl"
       fontFamily="Allrounder Monument Test"
       ref={ref}
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      position="relative"
     >
+      <Box position="relative" display="inline-block" mb="4rem">
+        <Image
+          src={contactImageMap[selectedLanguage]}
+          maxH={{ base: "5rem", md: "6rem" }}
+          objectFit="cover"
+          mx="auto"
+        />
+        <Box
+          position="absolute"
+          bottom="0.3rem"
+          left="50%"
+          transform="translateX(-50%)"
+          borderBottom={{
+            base: "0.1em solid #A0794E",
+            md: "0.1em solid #A0794E",
+          }}
+          width="15%"
+        ></Box>
+      </Box>
       <FormControl as="form" onSubmit={handleSubmit}>
         <Flex direction={["column", "row"]} gap={6} mb={6}>
           <Flex direction="column" flex="1">

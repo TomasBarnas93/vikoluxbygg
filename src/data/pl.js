@@ -4,7 +4,7 @@ export const plTranslation = {
   Projects: "PROJEKTY",
 
   //About
-  About: "Nasza firma istnieje na rynku od 2013 roku. W dniu dzisiejszym jest to tĘtniĄce Życiem miejsce pracy z 18 zaangaŻowanymi  pracownikami. Nasz zespÓŁ to mieszanka doŚwiadczonych weteranÓw i wschodzĄcych talentÓw wspÓlnie pracujĄcych w dynamicznym Środowisku.\n\nInnowacyjnoŚĆ i pomysŁowoŚĆ to nasze drugie imiĘ a zozumienie i speŁnienie oczekiwań klienta stawiamy na pierwszym miejscu ! Dlatego Twoje pomysŁy i Życzenia nie sĄ tylko mile widziane, ale stanowiĄ podstawĘ wszystkiego, co robimy. KŁadĄc Twoje wizje w centrum, dĄŻymy do wspÓlnego tworzenia wynikÓw przekraczajĄcych oczekiwania.\n\nCo wiĘcej? JesteŚmy w staŁej wspÓŁpracy z firmĄ hydraulicznĄ, elektrycznĄ oraz z architektem.",
+  About: "Nasza firma istnieje na rynku od 2013 roku. W dniu dzisiejszym jest to tĘtniĄce Życiem miejsce pracy z 18 zaangaŻowanymi  pracownikami. Nasz zespÓŁ to mieszanka doŚwiadczonych weteranÓw i wschodzĄcych talentÓw wspÓlnie pracujĄcych w dynamicznym Środowisku.\n\nInnowacyjnoŚĆ i pomysŁowoŚĆ to nasze drugie imiĘ a zozumienie i speŁnienie oczekiwaŃ klienta stawiamy na pierwszym miejscu ! Dlatego Twoje pomysŁy i Życzenia nie sĄ tylko mile widziane, ale stanowiĄ podstawĘ wszystkiego, co robimy. KŁadĄc Twoje wizje w centrum, dĄŻymy do wspÓlnego tworzenia wynikÓw przekraczajĄcych oczekiwania.\n\nCo wiĘcej? JesteŚmy w staŁej wspÓŁpracy z firmĄ hydraulicznĄ, elektrycznĄ oraz z architektem.",
 
   //Home - List
   1: "Budowa DomÓw",
