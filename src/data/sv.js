@@ -18,8 +18,8 @@ export const svTranslation = {
   9: "Kostnadsfri offert",
 
   //Contact
-  Success: "Meddelandet skickades framgÅngsrikt",
-  Wrong: "Hoppsan, nÅgot gick fel",
+  Success: "Meddelandet skickades framgångsrikt",
+  Wrong: "Hoppsan, något gick fel",
   first_name: "FÖrnamn",
   last_name: "Efternamn",
   email_address: "E-postadress",

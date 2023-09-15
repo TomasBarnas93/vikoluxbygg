@@ -18,8 +18,8 @@ export const plTranslation = {
   9: "BezpŁatna Wycena",
 
   //Contact
-  Success: "WiadomoŚĆ zostaŁa wysŁana pomyŚlnie",
-  Wrong: "Ups, coŚ poszŁo nie tak",
+  Success: "Wiadomość została wysłana pomyślnie",
+  Wrong: "Ups, coś poszŁo nie tak",
   first_name: "ImiĘ",
   last_name: "Nazwisko",
   email_address: "Adres e-mail",

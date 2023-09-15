@@ -17,6 +17,7 @@ import { useTranslation } from "react-i18next";
 import { LanguageContext } from "../services/LanguageContext";
 import contactEn from "../assets/images/contactEn.JPG";
 import contactPl from "../assets/images/contactPl.JPG";
+
 const Contact = forwardRef((props, ref) => {
   const [recipientName, setRecipientName] = useState("");
   const { t } = useTranslation();
@@ -31,9 +32,11 @@ const Contact = forwardRef((props, ref) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
-    const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
-    const USER_ID = process.env.REACT_APP_USER_ID;
+    //#region
+    const SERVICE_ID = "service_k8vxijn";
+    const TEMPLATE_ID = "template_a7cz8yd";
+    const USER_ID = "VMTgh-aT4huSqsGHr";
+    //#endregion
 
     const formData = {
       from_firstname: e.target.elements.from_firstname.value,
@@ -169,6 +172,7 @@ const Contact = forwardRef((props, ref) => {
             name="message"
             w="100%"
             borderColor="#5a351d"
+            fontFamily="Arial"
             required
           />
         </Flex>
