@@ -1,6 +1,6 @@
 export const plTranslation = {
   //Navbar
-  Contact: "KONTAKTY",
+  Contact: "KONTAKT",
   Projects: "PROJEKTY",
 
   //About

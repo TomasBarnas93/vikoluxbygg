@@ -3,8 +3,14 @@ import { Flex, Box, Image } from "@chakra-ui/react";
 import photoEn from "../assets/images/photoEn.JPG";
 import photoPl from "../assets/images/photoPl.JPG";
 import photoSv from "../assets/images/photoSv.JPG";
-import testImg from "../assets/images/1.jpg";
+import beforeAfter1 from "../assets/images/beforeAfter1.JPG";
+import beforeAfter2 from "../assets/images/beforeAfter2.JPG";
 import { LanguageContext } from "../services/LanguageContext";
+import AwesomeSlider from "react-awesome-slider";
+import withAutoplay from "react-awesome-slider/dist/autoplay";
+import BeforeAwesomeSliderStyles from "react-awesome-slider/src/styles";
+
+const BeforeAutoplaySlider = withAutoplay(AwesomeSlider);
 
 const BeforeAfter = () => {
   const { selectedLanguage } = useContext(LanguageContext);
@@ -43,11 +49,25 @@ const BeforeAfter = () => {
             ></Box>
           </Box>
         </Flex>
-        <Flex>
-          <Image src={testImg} maxH="50rem" mt={10} />
-        </Flex>
       </Flex>
-      <Box boxShadow="lg">&nbsp;</Box>
+      <BeforeAutoplaySlider
+        cssModule={BeforeAwesomeSliderStyles}
+        play={true}
+        interval={2500}
+        cancelOnInteraction={false}
+        style={{
+          width: "95%",
+          maxWidth: "45rem",
+          margin: "0 auto",
+          marginBottom: "2rem",
+          "@media (min-width: 48em)": {
+            maxWidth: "30rem",
+          },
+        }}
+      >
+        <div data-src={beforeAfter1} />
+        <div data-src={beforeAfter2} />
+      </BeforeAutoplaySlider>
     </div>
   );
 };
