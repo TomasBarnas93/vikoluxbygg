@@ -17,7 +17,7 @@ const Reviews = () => {
 
   return (
     <div>
-      <div className="elfsight-app-35fb6f4e-6f67-41ca-a983-ba4bb3d5233d"></div>
+      <div className="elfsight-app-74a49eb2-7510-4e9d-8c66-5f6f980050a3"></div>
     </div>
   );
 };
