@@ -1,6 +1,7 @@
 import React from "react";
 import email from "../assets/images/email.png";
 import facebook from "../assets/images/facebook.png";
+import instagram from "../assets/images/instagram.png";
 import tel from "../assets/images/tel.png";
 import map from "../assets/images/map.png";
 import bkrlogo from "../assets/images/bkrlogo.jpg";
@@ -82,6 +83,12 @@ const Foot = () => {
               _hover={{ textDecoration: "none" }}
             >
               <Image src={facebook} maxH="2.5rem" />
+            </Link>
+            <Link
+              href="https://www.instagram.com/vikoluxbygg/"
+              _hover={{ textDecoration: "none" }}
+            >
+              <Image src={instagram} maxH="2.5rem" />
             </Link>
             <Link href="https://www.bkr.se/">
               <Image src={bkrlogo} maxH="2.5rem" />
@@ -167,6 +174,12 @@ const Foot = () => {
           >
             <Image src={facebook} maxH="2.5rem" mb={2} />
           </Link>
+          <Link
+              href="https://www.instagram.com/vikoluxbygg/"
+              _hover={{ textDecoration: "none" }}
+            >
+              <Image src={instagram} maxH="2.5rem" mb={2} />
+            </Link>
           <Link href="https://www.bkr.se/">
             <Image src={bkrlogo} maxH="2.5rem" />
           </Link>

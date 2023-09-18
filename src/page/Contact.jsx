@@ -24,9 +24,9 @@ const Contact = forwardRef((props, ref) => {
   const { selectedLanguage } = useContext(LanguageContext);
 
   const contactImageMap = {
-    en: contactEn,
-    pl: contactPl,
-    sv: contactEn,
+    en: { src: contactEn, maxW: { base: "24rem", md: "44rem"}, maxH: { base: "7rem", md: "9rem" } },
+    pl: { src: contactPl, maxW: { base: "24rem", md: "45rem"}, maxH: { base: "7rem", md: "8rem" } },
+    sv: { src: contactPl, maxW: { base: "24rem", md: "45rem"}, maxH: { base: "7rem", md: "8rem" } },
   };
 
   const handleSubmit = (e) => {
@@ -88,14 +88,15 @@ const Contact = forwardRef((props, ref) => {
     >
       <Box position="relative" display="inline-block" mb="4rem">
         <Image
-          src={contactImageMap[selectedLanguage]}
-          maxH={{ base: "5rem", md: "6rem" }}
+          src={contactImageMap[selectedLanguage].src}
+          maxH={contactImageMap[selectedLanguage].maxH}
+          maxW={contactImageMap[selectedLanguage].maxW}
           objectFit="cover"
           mx="auto"
         />
-        <Box
+          <Box
           position="absolute"
-          bottom="0.3rem"
+          bottom="0.2rem"
           left="50%"
           transform="translateX(-50%)"
           borderBottom={{
@@ -105,6 +106,7 @@ const Contact = forwardRef((props, ref) => {
           width="15%"
         ></Box>
       </Box>
+
       <FormControl as="form" onSubmit={handleSubmit}>
         <Flex direction={["column", "row"]} gap={6} mb={6}>
           <Flex direction="column" flex="1">

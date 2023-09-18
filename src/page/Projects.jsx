@@ -12,7 +12,6 @@ import Slide8 from "../assets/images/Slide8.PNG";
 import Slide9 from "../assets/images/Slide9.PNG";
 import Slide10 from "../assets/images/Slide10.PNG";
 import Slide11 from "../assets/images/Slide11.PNG";
-import Slide12 from "../assets/images/Slide12.PNG";
 import { Image, Box, Flex } from "@chakra-ui/react";
 import projectEn from "../assets/images/projectsEn.png";
 import projectPl from "../assets/images/projectsPl.png";
@@ -25,9 +24,9 @@ const Projects = forwardRef((props, ref) => {
   const { selectedLanguage } = useContext(LanguageContext);
 
   const languageImageMap = {
-    en: projectEn,
-    pl: projectPl,
-    sv: projectSv,
+    en: {src: projectEn, maxH: { base: "2.5rem", md: "4.5rem" } },
+    pl: {src: projectPl, maxH: { base: "5rem", md: "3.5rem" } },
+    sv: {src: projectSv, maxH: { base: "2rem", md: "3.5rem" } },
   };
 
   return (
@@ -35,21 +34,20 @@ const Projects = forwardRef((props, ref) => {
       <Flex p={10} justifyContent="center" alignItems="center" maxH="10rem">
         <Box position="relative" display="inline-block">
           <Image
-            src={languageImageMap[selectedLanguage]}
-            maxH={{ base: "1.8rem", md: "4rem" }}
-            maxW={{ base: "35rem", md: "39rem" }}
+            src={languageImageMap[selectedLanguage].src}
+            maxH={languageImageMap[selectedLanguage].maxH}
             objectFit="cover"
           />
           <Box
             position="absolute"
-            bottom="-1rem"
+            bottom="-0.9rem"
             left="50%"
             transform="translateX(-50%)"
             borderBottom={{
               base: "0.1em solid #A0794E",
               md: "0.1em solid #A0794E",
             }}
-            width="50%"
+            width="40%"
           ></Box>
         </Box>
       </Flex>
@@ -78,7 +76,6 @@ const Projects = forwardRef((props, ref) => {
         <div data-src={Slide9} />
         <div data-src={Slide10} />
         <div data-src={Slide11} />
-        <div data-src={Slide12} />
       </AutoplaySlider>
       <Box boxShadow="lg">&nbsp;</Box>
     </div>

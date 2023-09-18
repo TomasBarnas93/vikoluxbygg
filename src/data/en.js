@@ -11,7 +11,7 @@ export const enTranslation = {
   2: "Terrace Building",
   3: "Garden Installations around the House",
   4: "Complete Bathroom Renovation",
-  5: "Furniture Assembly",
+  5: "Furniture design and assembly",
   6: "Adaptation of Attics and Basements",
   7: "Facades",
   8: "Professional Advice",

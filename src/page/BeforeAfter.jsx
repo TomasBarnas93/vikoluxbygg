@@ -16,13 +16,13 @@ const BeforeAfter = () => {
   const { selectedLanguage } = useContext(LanguageContext);
 
   const photoImageMap = {
-    en: photoEn,
-    pl: photoPl,
-    sv: photoSv,
+    en: { src: photoEn, maxH: { base: "5rem", md: "9rem" } },
+    pl: { src: photoPl, maxH: { base: "6rem", md: "10rem" } },
+    sv: { src: photoSv, maxH: { base: "7rem", md: "9rem" } },
   };
 
   return (
-    <div>
+    <div className="before-after-container">
       <Flex
         p={{ base: "1rem", md: "2rem" }}
         justifyContent="center"
@@ -32,8 +32,8 @@ const BeforeAfter = () => {
         <Flex>
           <Box position="relative" display="inline-block">
             <Image
-              src={photoImageMap[selectedLanguage]}
-              maxH={{ base: "5rem", md: "9rem" }}
+              src={photoImageMap[selectedLanguage].src}
+              maxH={photoImageMap[selectedLanguage].maxH}
               objectFit="cover"
             />
             <Box
@@ -45,7 +45,7 @@ const BeforeAfter = () => {
                 base: "0.1em solid #A0794E",
                 md: "0.1em solid #A0794E",
               }}
-              width="50%"
+              width="15%"
             ></Box>
           </Box>
         </Flex>

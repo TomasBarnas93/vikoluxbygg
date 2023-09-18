@@ -11,7 +11,7 @@ export const plTranslation = {
   2: "Budowa TarasÓw",
   3: "ZakŁadanie OgrodÓw wokÓŁ Domu",
   4: "Kompletna renowacja Łazienek",
-  5: "MontaŻ Mebli",
+  5: "Wykonanie i montaŻ mebli",
   6: "Adaptacja Poddaszy i Piwnic",
   7: "Fasady",
   8: "Profesjonalne Doradztwo",

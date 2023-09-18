@@ -11,7 +11,7 @@ export const svTranslation = {
   2: "Terrassbyggnader",
   3: "TrÄdgÅrdsanlÄggningar runt hus",
   4: "Komplett badrumsrenovering",
-  5: "MÖbelmontering",
+  5: "MÖbeldesign och montering",
   6: "Anpassning av vindar och kÄllare",
   7: "Fasader",
   8: "Professionell rÅdgivning",

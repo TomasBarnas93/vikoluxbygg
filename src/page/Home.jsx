@@ -23,9 +23,9 @@ const Home = forwardRef((props, ref) => {
   const { selectedLanguage } = useContext(LanguageContext);
 
   const serviceImageMap = {
-    en: servicesEn,
-    pl: servicesPl,
-    sv: servicesSv,
+    en: { src: servicesEn, maxW: { base: "24rem", md: "43rem"}, maxH: { base: "5rem", md: "4rem" } },
+    pl: { src: servicesPl, maxW: { base: "20rem", md: "45rem"}, maxH: { base: "5rem", md: "4rem" } },
+    sv: { src: servicesSv, maxW: { base: "23rem", md: "43rem"}, maxH: { base: "5rem", md: "4rem" } },
   };
   const mottoImageMap = {
     en: mottoEn,
@@ -42,62 +42,64 @@ const Home = forwardRef((props, ref) => {
       >
         <Image
           src={mottoImageMap[selectedLanguage]}
-          maxW={{ base: "90%", md: "35rem" }}
+          maxW={{ base: "90%", md: "50rem" }}
         />
       </Flex>
 
       <Flex
-  direction={["column", "row"]}
-  align="center"
-  justify="center"
-  spacing="5"
-  p={5}
-  borderRadius="lg"
-  shadow="xl"
->
-  <Box
-    flex={{ base: "1", md: "0.5" }}
-    p={5}
-    display="flex"
-    flexDirection="column"
-    alignItems="center"
-    justifyContent="center"
-    textAlign="justify"
-    backgroundColor="white"
-    borderRadius="lg"
-  >
-    <Text
-      color="#5a351d"
-      mb={4}
-      fontSize="xl"
-      fontFamily="Allrounder Monument Test"
-    >
-      {t("About")
-        .split("\n")
-        .map((paragraph, index) => (
-          <React.Fragment key={index}>
-            {paragraph}
-            <br />
-          </React.Fragment>
-        ))}
-    </Text>
-  </Box>
-  <Box flex={{ base: "1", md: "0.5" }} p={5} position="relative"> 
-    <Image
-      src={aboutImg}
-      alt="aboutImg"
-      objectFit="cover"
-      boxSize="full"
-      maxW={{ base: "100%", md: "100%" }}  
-    />
-  </Box>
-</Flex>
-
-
+        direction={["column", "row"]}
+        align="center"
+        justify="center"
+        spacing="5"
+        p={5}
+        borderRadius="lg"
+        shadow="xl"
+      >
+        <Box
+          flex={{ base: "1", md: "0.5" }}
+          p={5}
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+          textAlign="justify"
+          backgroundColor="white"
+          borderRadius="lg"
+        >
+          <Text
+            color="#5a351d"
+            mb={4}
+            fontSize={{ base: "xl", md: "x-large", lg: "xx-large" }}
+            fontFamily="Allrounder Monument Test"
+          >
+            {t("About")
+              .split("\n")
+              .map((paragraph, index) => (
+                <React.Fragment key={index}>
+                  {paragraph}
+                  <br />
+                </React.Fragment>
+              ))}
+          </Text>
+        </Box>
+        <Box flex={{ base: "1", md: "0.5" }} p={5} position="relative">
+          <Image
+            src={aboutImg}
+            alt="aboutImg"
+            objectFit="cover"
+            boxSize="full"
+            maxW={{ base: "100%", md: "100%" }}
+          />
+        </Box>
+      </Flex>
 
       <Flex p={10} justifyContent="center" alignItems="center" maxH="10rem">
         <Box position="relative" display="inline-block">
-          <Image src={serviceImageMap[selectedLanguage]} maxH="3.7em" />
+          <Image
+            src={serviceImageMap[selectedLanguage].src}
+            maxH={serviceImageMap[selectedLanguage].maxH}
+            maxW={serviceImageMap[selectedLanguage].maxW}
+          />
           <Box
             position="absolute"
             bottom="-1rem"
@@ -107,7 +109,7 @@ const Home = forwardRef((props, ref) => {
               base: "0.1em solid #A0794E",
               md: "0.1em solid #A0794E",
             }}
-            width="50%"
+            width="30%"
           ></Box>
         </Box>
       </Flex>
@@ -125,7 +127,7 @@ const Home = forwardRef((props, ref) => {
             display={{ base: "block", md: "grid" }}
             gridTemplateColumns={{ md: "repeat(2, 1fr)" }}
             gap={{ base: 5, md: 10 }}
-            fontSize="xl"
+            fontSize={{ base: "xl", md: "x-large", lg: "xx-large"}}
             fontFamily="Allrounder Monument Test"
             color="#5a351d"
           >
