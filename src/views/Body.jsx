@@ -22,8 +22,8 @@ function Body() {
       <Home ref={homeRef} />
       <Projects ref={projectsRef} />
       <BeforeAfter />
-      <Reviews />
       <Contact ref={contactRef} />
+      <Reviews />
       <Foot />
     </main>
   );

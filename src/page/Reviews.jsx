@@ -1,38 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 const Reviews = () => {
-  const [reviews, setReviews] = useState(null);
-  const placeId = "ChIJZb3oKiQ_iWQRBmMaOiYTe6M";
-  const apiKey = "AIzaSyBs35n1h1X-foHoTNYyqWfIQjtD7h2jxDA";
 
   useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        const response = await fetch(`https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeId}&fields=review&key=${apiKey}`);
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        setReviews(data.result.reviews);
-      } catch (error) {
-        console.error("Error fetching reviews:", error);
-      }
-    };
+    const script = document.createElement('script');
+    script.src = "https://static.elfsight.com/platform/platform.js";
+    script.setAttribute("data-use-service-core", "");
+    script.defer = true;
 
-    fetchReviews();
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
 
   return (
     <div>
-      {reviews ? (
-        reviews.map((review, index) => (
-          <div key={index}>
-            <p>{review.author_name}: {review.text}</p>
-          </div>
-        ))
-      ) : (
-        <p></p>
-      )}
+      <div className="elfsight-app-35fb6f4e-6f67-41ca-a983-ba4bb3d5233d"></div>
     </div>
   );
 };
