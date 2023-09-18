@@ -69,7 +69,7 @@ const Home = forwardRef((props, ref) => {
           <Text
             color="#5a351d"
             mb={4}
-            fontSize={{ base: "xl", md: "x-large", lg: "xx-large" }}
+            fontSize="xl"
             fontFamily="Allrounder Monument Test"
           >
             {t("About")
@@ -127,7 +127,7 @@ const Home = forwardRef((props, ref) => {
             display={{ base: "block", md: "grid" }}
             gridTemplateColumns={{ md: "repeat(2, 1fr)" }}
             gap={{ base: 5, md: 10 }}
-            fontSize={{ base: "xl", md: "x-large", lg: "xx-large"}}
+            fontSize="xl"
             fontFamily="Allrounder Monument Test"
             color="#5a351d"
           >
