@@ -26,7 +26,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: localStorage.getItem("selectedLanguage") || "en",
+  lng: localStorage.getItem("selectedLanguage") || "sv",
   keySeparator: false,
   interpolation: {
     escapeValue: false,
