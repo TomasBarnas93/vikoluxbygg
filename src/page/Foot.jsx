@@ -77,6 +77,7 @@ const Foot = () => {
             align="center"
             justifyContent="center"
             gap="1rem"
+            p={3}
           >
             <Link
               href="https://www.facebook.com/profile.php?id=100082258553443"
