@@ -7,10 +7,7 @@ import beforeAfter1 from "../assets/images/beforeAfter1.JPG";
 import beforeAfter2 from "../assets/images/beforeAfter2.JPG";
 import { LanguageContext } from "../services/LanguageContext";
 import AwesomeSlider from "react-awesome-slider";
-import withAutoplay from "react-awesome-slider/dist/autoplay";
 import BeforeAwesomeSliderStyles from "react-awesome-slider/src/styles";
-
-const BeforeAutoplaySlider = withAutoplay(AwesomeSlider);
 
 const BeforeAfter = () => {
   const { selectedLanguage } = useContext(LanguageContext);
@@ -50,11 +47,8 @@ const BeforeAfter = () => {
           </Box>
         </Flex>
       </Flex>
-      <BeforeAutoplaySlider
+      <AwesomeSlider
         cssModule={BeforeAwesomeSliderStyles}
-        play={true}
-        interval={2500}
-        cancelOnInteraction={false}
         style={{
           width: "95%",
           maxWidth: "45rem",
@@ -67,7 +61,7 @@ const BeforeAfter = () => {
       >
         <div data-src={beforeAfter1} />
         <div data-src={beforeAfter2} />
-      </BeforeAutoplaySlider>
+      </AwesomeSlider>
     </div>
   );
 };
