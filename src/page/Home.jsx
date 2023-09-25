@@ -62,7 +62,7 @@ const Home = forwardRef((props, ref) => {
           flexDirection="column"
           alignItems="center"
           justifyContent="center"
-          textAlign="justify"
+          textAlign={{base: "left" , md: "justify" }}
           backgroundColor="white"
           borderRadius="lg"
         >
