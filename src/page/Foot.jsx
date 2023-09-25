@@ -156,7 +156,7 @@ const Foot = () => {
             marginBottom="2rem"
             marginTop="0.5rem"
           >
-            kontakt@vikoluxbyggab.se
+            vikoluxbygg@gmail.com
           </Text>
           <Text
             color="#5a351d"
